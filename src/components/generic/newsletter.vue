@@ -8,7 +8,7 @@
       />
       <input
         type="submit"
-        class="input-reset w-100 w-auto-ns bg-black-80 white hover-bg-near-white hover-near-black f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray"
+        class="input-reset w-100 w-auto-ns bg-purple white hover-bg-near-white hover-near-black f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray"
       />
     </div>
   </section>

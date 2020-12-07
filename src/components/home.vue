@@ -3,7 +3,7 @@
     <siteheader />
     <div
       class="fl vh-100 dt w-100 bg-dark-gray white cover"
-      style="background:url(https://cdn.shopify.com/s/files/1/1463/5092/files/Ofuure_Swimsuit_Website_Banner_1_847b9e21-48c4-41ec-a04f-a62581ef9030_1296x.jpg?v=1596202446) no-repeat center;"
+      :style="{backgroundImage: 'url('+require('@/assets/img/banabre.jpg')+') '}"
     >
       <div class="dtc v-mid pl3">
         <div class="w5 pa3 bg-white-80 br2 tl near-black">
@@ -18,7 +18,7 @@
 
       <div class="fl w-100 pv4">
         <div class="w-50 fl pa1">
-          <div class="w-100 pa3 vh-50" style="width:100%;background:#e75874">
+          <div class="w-100 pa3 vh-50" style="width:100%;" :style="{backgroundImage: 'url('+require('@/assets/img/cookiecol.jpg')+') '}">
             <div class="dt w-100 h-100 bg-black-20">
               <div class="dtc v-mid tc pointer">
                 <button
@@ -31,7 +31,7 @@
         </div>
 
         <div class="w-50 fl pa1">
-          <div class="w-100 pa3 vh-50" style="width:100%;background:#fbcbc9">
+          <div class="w-100 pa3 vh-50" style="width:100%;" :style="{backgroundImage: 'url('+require('@/assets/img/cookiecol2.jpg')+') '}">
             <div class="dt w-100 h-100 bg-black-20">
               <div class="dtc v-mid tc pointer">
                 <button
@@ -44,7 +44,7 @@
         </div>
 
         <div class="w-50 fl pa1">
-          <div class="w-100 pa3 vh-50" style="width:100%;background:#be1558">
+          <div class="w-100 pa3 vh-50" style="width:100%;" :style="{backgroundImage: 'url('+require('@/assets/img/ban.jpg')+') '}">
             <div class="dt w-100 h-100 bg-black-20">
               <div class="dtc v-mid tc pointer">
                 <button
@@ -57,12 +57,12 @@
         </div>
 
         <div class="w-50 fl pa1">
-          <div class="w-100 pa3 vh-50" style="width:100%;background:#322514">
+          <div class="w-100  pa3 vh-50" style="width:100%;" :style="{backgroundImage: 'url('+require('@/assets/img/ban.jpg')+') '}">
             <div class="dt w-100 h-100 bg-black-20">
               <div class="dtc v-mid tc pointer">
                 <button
                   class="center pointer hover-black br1 pv2 ph3 bn near-black f5"
-                  style="background:#fbcbc9"
+                  style="background:#322514"
                 >SHOP NOW</button>
               </div>
             </div>
