@@ -1,7 +1,6 @@
 <template>
   <header>
     <span :class="{'':lSwitchmenu}" class="fixed w-100 cf">
-        <nav class="top-0 w-100 cf tc near-white bg-black f7">
             <span class="dn dib-ns fl w-100 pl2 pv2 tl tc-l tracked">
                 <small>SIGN UP FOR OUR NEWSLETTER TO GET DISCOUNTS</small>
             </span>
@@ -15,16 +14,16 @@
                 </span>
             </span>
         </nav>
-        <nav :class="{'bg-white near-black fade-in':lSwitchmenu, 'bg-black-80 near-white':!lSwitchmenu}" class="tc-l tl w-100 center pa2">
-            <img class="h3-l h2" src="@/assets/img/xclassy.svg" />
+        <nav :class="{'bg-white illusion fade-in':lSwitchmenu, 'bg-pink near-white':!lSwitchmenu}" class="tc-l tl w-100 center pa2">
+            <img class="h3-l h2" src="@/assets/img/abyalogo.svg" />
             <span class="dn-l"><i class="fa fa-bars f3 fr"/></span>
             <div class="cf w-100 dn db-l">
                 <router-link to="/" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Home</router-link>
                 <router-link to="/shop" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">
                     <i class="fa fa-shop" /> Shop
                 </router-link>
-                <router-link to="/brand" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Brand</router-link>
-                <router-link to="/guide" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Style Guide</router-link>
+                <router-link to="/brand" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">About</router-link>
+                <router-link to="/guide" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Cart</router-link>
                 <router-link to="/contact" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Contact</router-link>
             </div>
         </nav>
