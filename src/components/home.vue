@@ -17,7 +17,7 @@
       <featureditems title="NEW ARRIVALS" />
 
       <div class="fl w-100 pv4">
-        <div class="w-50 fl pa1">
+        <div class="w-100 w-50-l fl pa1">
           <div class="w-100 pa3 vh-50" style="width:100%;" :style="{backgroundImage: 'url('+require('@/assets/img/cookiecol.jpg')+') '}">
             <div class="dt w-100 h-100 bg-black-20">
               <div class="dtc v-mid tc pointer">
@@ -30,7 +30,7 @@
           </div>
         </div>
 
-        <div class="w-50 fl pa1">
+        <div class="w-100 w-50-l fl pa1">
           <div class="w-100 pa3 vh-50" style="width:100%;" :style="{backgroundImage: 'url('+require('@/assets/img/cookiecol2.jpg')+') '}">
             <div class="dt w-100 h-100 bg-black-20">
               <div class="dtc v-mid tc pointer">
@@ -43,7 +43,7 @@
           </div>
         </div>
 
-        <div class="w-50 fl pa1">
+        <div class="w-100 w-50-l fl pa1">
           <div class="w-100 pa3 vh-50" style="width:100%;" :style="{backgroundImage: 'url('+require('@/assets/img/ban.jpg')+') '}">
             <div class="dt w-100 h-100 bg-black-20">
               <div class="dtc v-mid tc pointer">
@@ -56,7 +56,7 @@
           </div>
         </div>
 
-        <div class="w-50 fl pa1">
+        <div class="w-100 w-50-l fl pa1">
           <div class="w-100  pa3 vh-50" style="width:100%;" :style="{backgroundImage: 'url('+require('@/assets/img/ban.jpg')+') '}">
             <div class="dt w-100 h-100 bg-black-20">
               <div class="dtc v-mid tc pointer">

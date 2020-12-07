@@ -1,11 +1,12 @@
 <template>
   <header>
     <span :class="{'':lSwitchmenu}" class="fixed w-100 cf">
+        <nav class="top-0 w-100 cf tc near-white bg-light-pink f7">
             <span class="dn dib-ns fl w-100 pl2 pv2 tl tc-l tracked">
                 <small>SIGN UP FOR OUR NEWSLETTER TO GET DISCOUNTS</small>
             </span>
 
-            <span class="dib absolute-ns right-0 pv2 pr2">
+            <span class="dib illusion fade-in absolute-ns right-0 pv2 pr2">
                 <i class="fa fa-search mh2"></i>
                 <span class="fr">
                     <i class="fa fa-shopping-cart mh2"></i>
@@ -22,7 +23,7 @@
                 <router-link to="/shop" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">
                     <i class="fa fa-shop" /> Shop
                 </router-link>
-                <router-link to="/brand" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">About</router-link>
+                <router-link to="/brand" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Blog</router-link>
                 <router-link to="/guide" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Cart</router-link>
                 <router-link to="/contact" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Contact</router-link>
             </div>

@@ -1,7 +1,7 @@
 <template>
   <section class>
     <div class="pv4 center w-50-l w-80 tc">
-      <p class="f4 fw6 mb2 f6 mt0 mb3">Sign up for our newsletter.</p>
+      <p class="f4 fw6 mb2 f4 mt0 mb3">Sign up for our newsletter.</p>
       <input
         placeholder="Email Address"
         class="mw-100 w-100 w5-ns f5 input-reset ba b--black-20 pv3 ph4 border-box"

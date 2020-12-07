@@ -1,12 +1,6 @@
 <template>
   <footer class="fl w-100 center bg-pink near-white bt b--black-10">
     <newsletter />
-    <div class="w-100 bg-near-white near-black">
-      <div class="w-70-l w-100 center">
-        <div class="pa2 cf w-100">
-        </div>
-      </div>
-    </div>
     <div class="pv3 ph ph5-ns tc bg-pink">
       <a class="link dim gray dib h2 w2 br-100 mr3 " href="#" target="blank">
       <svg data-icon="facebook" viewBox="0 0 32 32" style="fill:currentcolor">
@@ -38,7 +32,9 @@
           <path d="M10 9.333l5.333 2.662-5.333 2.672v-5.334zm14-4.333v14c0 2.761-2.238 5-5 5h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5zm-4 7c-.02-4.123-.323-5.7-2.923-5.877-2.403-.164-7.754-.163-10.153 0-2.598.177-2.904 1.747-2.924 5.877.02 4.123.323 5.7 2.923 5.877 2.399.163 7.75.164 10.153 0 2.598-.177 2.904-1.747 2.924-5.877z"></path>
         </svg>
       </a>
-      <small class="f6 db tc">© {{date}} AdùnByAdétóún || All Rights Reserved. </small>
+      <span class="f7">
+        <small class="db tc">© {{date}} AdùnByAdétóún || All Rights Reserved. </small>
+      </span>  
     </div>
   </footer>
 </template>

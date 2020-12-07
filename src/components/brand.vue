@@ -44,7 +44,7 @@
                 <div class="fl dn dib-l w-30 mt6">
                     <div class="cf w-100 center bg-light-pink">
                         <div class=" tc relative">
-                            <img src="@/assets/owner3.jpg" class="br-100 dib center nt4 w4" style="" alt="avatar">
+                            <img src="@/assets/img/owner3.jpg" class="br-100 dib center nt4 w4" style="" alt="avatar">
                         </div> 
                         <div class="ph3 w-100">
                             <div class="tc pt4 purple f3 pb3 pretty">Hi, I'm Adétóún!</div>
