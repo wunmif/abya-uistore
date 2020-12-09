@@ -19,5 +19,6 @@
 
 <style media="screen">
     @import "assets/css/fontawesomepro.css";
+    @import "assets/css/style.css";
     @import "assets/css/animista.css";
 </style>

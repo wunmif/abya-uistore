@@ -1,7 +1,7 @@
 <template>
-  <footer class="fl w-100 center bg-pink near-white bt b--black-10">
+  <footer class="fl w-100 center bg-default near-white bt b--black-10">
     <newsletter />
-    <div class="pv3 ph ph5-ns tc bg-pink">
+    <div class="pv3 ph ph5-ns tc bg-default">
       <a class="link dim gray dib h2 w2 br-100 mr3 " href="#" target="blank">
       <svg data-icon="facebook" viewBox="0 0 32 32" style="fill:currentcolor">
         <title>facebook icon</title>
