@@ -12,6 +12,7 @@ import shippingComponent from "@/components/shipping";
 import shopComponent from "@/components/shop";
 import storepolicyComponent from "@/components/storepolicy";
 import termComponent from "@/components/term";
+import writeupComponent from "@/components/writeup";
 import view_productComponent from "@/components/view_product";
 import Vue from "vue";
 import Router from "vue-router";
@@ -34,6 +35,7 @@ export const router = new Router({
     { path: "/store_policy", component: storepolicyComponent },
     { path: "/terms", component: termComponent },
     { path: "/view_product", component: view_productComponent },
+    { path: "/writeup", component: writeupComponent },
     // { path: "/add_to_cart", component: add_to_cartComponent },
     // { path: "/payment", component: paymentComponent },
     // { path: "/checkout", component: checkoutComponent },

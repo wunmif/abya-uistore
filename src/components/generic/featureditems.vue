@@ -40,6 +40,11 @@
                 {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
                 {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
                 {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+                {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+                {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+                {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+                {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+                {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
 
                 
             ],

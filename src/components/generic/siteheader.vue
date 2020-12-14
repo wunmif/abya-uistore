@@ -26,12 +26,69 @@
           <router-link to="/brand" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Blog</router-link>
           <router-link to="/guide" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Cart</router-link>
           <router-link to="/contact" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Contact</router-link>
+          <router-link to="/writeup" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Article</router-link>
         </div>
       </nav>
 
     </span>
-    <div class="w-100 fl bg-black-50" style="height:76px">&nbsp;</div>
+    <div class="w-100  fl bg-black-50" style="height:76px">&nbsp;</div>
     <div class="w-100 fl bg-black-50 dn db-l" style="height:80px">&nbsp;</div>
+    <div class=" cf w-100 bg-black">
+        <div class="top-0 left-0 vh-100  fl w-100 fixed bg-black-30 absolute z-max dn" :class="{'slideInLeft':lShow, 'slideOutLeft':!lShow}"> 
+          <div class="fl w-100 ">
+            <div class="fl w-100 pointer "  @click="toggleMenu">    
+              <div class="ph2 w-70 center overflow-y-scroll pt3 fl vh-100 z-max fw5 bg-default dn-l dark-gray">
+                <div class="fl w-100">
+                  <i class="fal white fa-times-circle"></i>
+                  <div class="b pl1 pv3 f5 f6-m">
+                      <input class="f7 f5-l input-reset bn fl black-80 bg-white pa2 lh-solid w-90 br-pill " autocomplete="off" placeholder="Search..." type="text" name="search" value="" id="search">
+                  </div>
+                </div>
+
+                <div class="fl w-100">
+                  <div class="b pl2 pv4 f f6-m">
+                    <router-link class="link white" to="/">Home</router-link>
+                  </div>
+                </div>
+
+                <div class="fl w-100">
+                  <div class="b pl2 pb4 f5 f6-m">
+                    <router-link class="link white" to="/shop">Shop</router-link>
+                  </div>
+                </div>
+
+                <div class="fl w-100">
+                  <div class="b pl2 pb4 f5 f6-m">
+                    <router-link class="link white" to="/brand">Blog</router-link>
+                  </div>
+                </div>
+
+                <div class="fl w-100">
+                  <div class="b pl2 pb4 f5 f6-m">
+                    <router-link class="link white" to="/guide">Cart</router-link>
+                  </div>
+                </div>
+
+                <div class="fl w-100">
+                  <div class="b pl2 pb4 f5 f6-m">
+                    <router-link class="link white" to="/contact">Contact</router-link>
+                  </div>
+                </div>
+                <div class="fl w-100 h2"></div>
+
+                <div class="fl w-100 ">
+                  <div class="b b--light-purple pl2 fa fa-sign-in pv2 white f5 f6-m">
+                    Login
+                  </div>                  
+                </div>
+                <div class="fl relative w-100 ">
+                  <small class="white fixed bottom-1 left-0 pt4 pl2 fl w-100 pv2-s f7">© 2020 AdùnByAdétóún</small>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+    </div>
   </header>
 </template>
 <script type="text/javascript">
@@ -51,8 +108,16 @@ export default {
       submenu,
       lShow: false,
       lSwitchmenu: false,
+      slideOut:"dn", 
+      height:0, padtop:0,
     };
   },
+    created () { 
+        //style="height:calc(100vh - 6rem)"
+        this.height = window.innerHeight - 64 + 'px'
+        // this.padtop = (window.outerHeight-window.innerHeight)+64 + 'px'
+        this.padtop = 64+'px'
+    },
   methods: {
     toggleMenu() {
       this.lShow = !this.lShow;
