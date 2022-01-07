@@ -1,86 +1,49 @@
 <template>
   <section class="mw7 center">
-    <h5 class="athelas ph3 ph0-l">Posts</h5>
-    <article class="pv2 grow bt bb b--black-10 ph3 ph0-l">
-        <div class="flex flex-column flex-row-ns">
-            <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
-                <h3 class="f6 athelas mt0 lh-title"> 
-                'Cookies
-                </h3>
-                <p class="f5 f6-l lh-copy athelas">
-                A cookie is a baked or cooked food that is typically small, flat and sweet. 
-                It usually contains flour, sugar and some type of oil or fat. It may include 
-                other ingredients such as raisins, oats, chocolate chips, nuts, etc.
-                </p>
-                <p>
-                    <a target="_blank" href="" class="mt0 f7"> Read More >></a>
-                </p>
+    
+    <siteheader />
+        <h5 class="athelas ph3 ph0-l">Posts</h5>
+        <div class="cf mw8 center w-100 ">
+            <div class="f7 ttu w-100 pa3 fl">
+                HOME <i class="mh1 fa fa-chevron-right"/> Shop
             </div>
-            <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
-                <img src="@/assets/img/fullcookies.jpg" class="h4 center db" alt="cookies">
+                
+            <div class="tc w-100 mv4">
+                <span class="cf f3 center bb b--near-black tracked">...</span>
             </div>
+            
+            <div class="f6 w-100 fl pb4">
+                <div class="fl" style="width:10rem"> 
+                    <span class="ph2 pointer fl w-100" @click="lSortby = !lSortby">Sort <i class="fr mr4 fa fa-chevron-down"/> </span>
+
+                    <div class="fl w-100 relative" @click="lSortby = !lSortby">
+                        <ul :class="{'slide-bottom':lSortby,'dn':!lSortby}" class="bg-white z-3 absolute w-100 pa0 ma0 list ">
+                            <li class="pa2 ph3 bt b--white-10 hover-bg-dark-gray hover-near-white pointer" v-for="(sort, index) in sortList" :key="index">
+                                {{sort.Title}}
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex flex-wrap w-100 center">
+                <div class="pr3 pb3 w-20 w-third-m w-50 ph2 " v-for="(product, index) in productList" :key="index">
+                    <div class="bg-near-white grow hover-bg-theme hover-purple pointer shadow-4 br3  h5 w-100">
+                        <div class="dtc v-mid tc bg-light-gray pointer" @mouseenter="product.Focus=true" @mouseleave="product.Focus=false">
+                            <router-link to="/view_product" v-if="product.Focus" class="center bg-black pointer hover-bg-light-pink hover-black br1 pa2 bn near-white f6 no-underline">Quick View</router-link>  
+                        </div>
+                    </div>
+                    <div class="w-60-l w-100 fl tc bg-white f6 pa2"> 
+                        {{product.Title}} <span class="db">{{product.Price}} {{product.Currency}}</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <p class="f7 lh-copy gray mv0">By <span class="ttu">Adetoun</span></p>
-        <time class="f7 db gray">Dec. 10, 2020</time>
-    </article>
-    <article class="pv2 grow bb b--black-10 ph3 ph0-l">
-        <div class="flex flex-column flex-row-ns">
-            <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
-                <h1 class="f6 athelas mt0 lh-title">
-                'Blondies
-                </h1>
-                <p class="f5 f6-l lh-copy athelas">
-                A blondie is a rich, sweet dessert bar. It resembles the traditional chocolate brownie, 
-                but substitutes vanilla for the cocoa used in brownies, and contains brown sugar. 
-                Blondies are made from flour, brown sugar, butter, eggs, baking powder, 
-                and vanilla, and may also contain walnuts or pecans.
-                </p>
-            </div>
-            <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
-                <img src="@/assets/img/fullblondies.jpg" class="h4 center db" alt="blondies">
-            </div>
-        </div>
-        <p class="f7 lh-copy gray mv0">By <span class="ttu">Adetoun</span></p>
-        <time class="f7 db gray">Dec. 10, 2020</time>      
-    </article>
-    <article class="pv2 grow bb b--black-10 ph3 ph0-l">
-        <div class="flex flex-column flex-row-ns">
-            <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
-                <h1 class="f6 athelas mt0 lh-title">
-                ‘Banana Bread
-                </h1>
-                <p class="f5 f6-l lh-copy athelas">
-                Banana bread is a type of bread made from mashed bananas. It is often a moist, 
-                sweet, cake-like quick bread; however there are some banana bread recipes that 
-                are traditional-style raised breads.
-                </p>
-            </div>
-            <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
-                <img src="@/assets/img/fullbanana.jpg" class="h4 center db" alt="banana bread">
-            </div>
-        </div>
-        <p class="f7 lh-copy gray mv0">By <span class="ttu">Adetoun</span></p>
-        <time class="f7 db gray">Dec. 10, 2020</time>
-    </article>
-    <article class="pv2 grow bb b--black-10 ph3 ph0-l">
-        <div class="flex flex-column flex-row-ns">
-            <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
-                <h1 class="f6 athelas mt0 lh-title">
-                ‘Yummy Brownies
-                </h1>
-                <p class="f5 f6-l lh-copy athelas">
-                A chocolate brownie or simply a brownie is a square or rectangular chocolate baked confection. 
-                Brownies come in a variety of forms and may be either fudgy or cakey, depending on their density. 
-                They may include nuts, frosting, cream cheese, chocolate chips, or other ingredients.
-                </p>
-            </div>
-            <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
-                <img src="@/assets/img/fullbrownies.jpg" class="h4 center db" alt="brownies.">
-            </div>
-        </div>
-        <p class="f7 lh-copy gray mv0">By <span class="ttu">Adetoun</span></p>
-        <time class="f7 db gray">Dec. 10, 2020</time>
-    </article>    
+        
+     <sitefooter />    
     
   </section>
 </template>
@@ -88,7 +51,36 @@
 <script type="text/javascript">
 export default {
   data() {
-      return {}
+      return {
+          notifications: [], lSortby: false,
+        sortList: [
+            {Code:"featured", Title:"Featured", Params:{}},
+            {Code:"pricelow", Title:"Price, low to high", Params:{}},
+            {Code:"pricehigh", Title:"Price, high to low", Params:{}},
+            {Code:"alphabeta", Title:"Alphabetically, A-Z", Params:{}},
+            {Code:"alphabetz", Title:"Alphabetically, Z-A", Params:{}},
+            {Code:"dateold", Title:"Date, old to new", Params:{}},
+            {Code:"datenew", Title:"Date, new to old", Params:{}},
+            {Code:"bestselling", Title:"Best Selling", Params:{}},
+        ],
+          productList:[
+            {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+            {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+            {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+            {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+            {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+            {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+            {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+            {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+            {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+            {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+            {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+            {Focus:false, Title:"Sample Product", Price:"1000", Currency:"NGN" },
+
+            
+        ],
+      }
+      
   },
   methods: {},
 };

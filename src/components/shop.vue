@@ -29,7 +29,7 @@
 
             <div class="flex flex-wrap w-100 center">
                 <div class="pr3 pb3 w-20-l w-third-m w-50 ph2 " v-for="(product, index) in productList" :key="index">
-                    <div class="bg-near-white grow hover-bg-theme hover-purple pointer shadow-4 br3 h5 w-100">
+                    <div class="bg-near-white grow hover-bg-theme hover-purple pointer shadow-4 br3  h5 w-100">
                         <div class="dtc v-mid tc bg-light-gray pointer" @mouseenter="product.Focus=true" @mouseleave="product.Focus=false">
                             <router-link to="/view_product" v-if="product.Focus" class="center bg-black pointer hover-bg-light-pink hover-black br1 pa2 bn near-white f6 no-underline">Quick View</router-link>  
                         </div>

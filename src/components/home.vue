@@ -1,17 +1,23 @@
 <template>
   <section>
     <siteheader />
-    <div
-      class="fl vh-100 dt w-100 bg-dark-gray white cover"
-      :style="{backgroundImage: 'url('+require('@/assets/img/banabre.jpg')+') '}"
-    >
-      <div class="dtc v-mid pl3">
-        <div class="w5 pa3 bg-white-80 br2 tl near-black">
-          <div class="f3 fw6 ttu tracked mb2 lh-title">#NEW ARRIVALS</div>
-          <div class="f6 ttu tracked mb2 lh-title">Shop our new arrivals</div>
-          <button class="bg-black br1 pa3 bn near-white f5">SHOP NOW</button>
-        </div>
-      </div>
+    <div class="w-100 vh-100  overflow-scroll cf h-100  relative">
+      <carousel
+        @next="next"
+        @prev="prev"
+      >
+        <carousel-slide v-for="(slide,index) in slides" 
+          :key="slide" 
+          :index="index"
+          :visibleSlide="visibleSlide"
+          :direction="direction"
+          >
+          <img :src="slide" class="w-100" /> 
+          
+          
+        </carousel-slide>
+      </carousel>
+      
     </div>
     <div class="w-100 mw9 center cf">
       <featureditems title="NEW ARRIVALS" />
@@ -82,12 +88,16 @@ import { checkRedirect } from "@/common";
 import siteheader from "@/components/generic/siteheader";
 import featureditems from "@/components/generic/featureditems";
 import sitefooter from "@/components/generic/sitefooter";
+import Carousel from "@/components/Carousel";
+import CarouselSlide from "@/components/CarouselSlide"
 
 export default {
   components: {
     siteheader,
     featureditems,
     sitefooter,
+    Carousel,
+    CarouselSlide
   },
   data() {
     return {
@@ -107,9 +117,56 @@ export default {
       current: 0,
       width: 800,
       timer: 0,
+
+      slides: [
+        require('@/assets/img/pic/testtest.jpg'), 
+        require('@/assets/img/pic/brotest.jpg'), 
+        require('@/assets/img/pic/new.jpg'), 
+        
+         
+        
+      ],
+      visibleSlide : 0,
+      direction: 'left',
+      timer: null,
+      currentIndex: 0
+    
     };
   },
+  mounted: function() {
+    this.startSlide();
+  },
+
+  computed: {
+    slidesLen() {
+      return this.slides.length;
+    },
+    currentImg: function() {
+      return this.images[Math.abs(this.currentIndex) % this.images.length];
+    }
+  },
   methods: {
+    startSlide: function() {
+      this.timer = setInterval(this.next, 3000);
+    },  
+    next() {
+      if(this.visibleSlide >= this.slidesLen - 1) {
+        this.visibleSlide = 0;
+      }else{
+        this.visibleSlide++;
+      }
+      this.direction = "left"
+      this.currentIndex += 1;
+    },
+    prev() {
+      if(this.visibleSlide <= 0) {
+        this.visibleSlide = this.slidesLen - 1;
+      }else{
+        this.visibleSlide--;
+      }
+      this.direction = "right"
+      this.currentIndex -= 1;
+    },
     nextSlide: function () {
       this.current++;
       if (this.current >= this.slides.length) this.current = 0;

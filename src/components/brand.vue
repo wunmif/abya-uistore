@@ -7,7 +7,7 @@
           <articles/> 
         </div>
       </div>
-      <div class="ph4 pv4 w-30 h-100 pa2 fl dn dib-l mt6">
+  <!--    <div class="ph4 pv4 w-30 h-100 pa2 fl dn dib-l mt6">
         <div class="w-100 h-100 ">
           <div class="cf w-100 center bg-light-pink">
             <div class=" tc relative">
@@ -79,7 +79,7 @@
         </div>
       </div>
         </div>
-      </div>
+      </div> --->
       </div>
     
     <sitefooter/>

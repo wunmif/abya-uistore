@@ -26,7 +26,7 @@
           <router-link to="/brand" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Blog</router-link>
           <router-link to="/guide" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Cart</router-link>
           <router-link to="/contact" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Contact</router-link>
-          <router-link to="/writeup" class="pointer f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Article</router-link>
+          <router-link to="/writeup" class="pointer dn-l f6 f5-l tracked link mh3 dib pa3 fw3 ttu ph4-l" :class="{'near-black fade-in':lSwitchmenu, 'near-white':!lSwitchmenu}">Article</router-link>
         </div>
       </nav>
 
@@ -34,14 +34,14 @@
     <div class="w-100  fl bg-black-50" style="height:76px">&nbsp;</div>
     <div class="w-100 fl bg-black-50 dn db-l" style="height:80px">&nbsp;</div>
     <div class=" cf w-100 bg-black">
-        <div class="top-0 left-0 vh-100  fl w-100 fixed bg-black-30 absolute z-max dn" :class="{'slideInLeft':lShow, 'slideOutLeft':!lShow}"> 
+        <div class="top-0 left-0 vh-80  fl w-100 fixed bg-black-30 absolute z-max dn" :class="{'slideInLeft':lShow, 'slideOutLeft':!lShow}"> 
           <div class="fl w-100 ">
             <div class="fl w-100 pointer "  @click="toggleMenu">    
               <div class="ph2 w-70 center overflow-y-scroll pt3 fl vh-100 z-max fw5 bg-default dn-l dark-gray">
                 <div class="fl w-100">
                   <i class="fal white fa-times-circle"></i>
                   <div class="b pl1 pv3 f5 f6-m">
-                      <input class="f7 f5-l input-reset bn fl black-80 bg-white pa2 lh-solid w-90 br-pill " autocomplete="off" placeholder="Search..." type="text" name="search" value="" id="search">
+                    <input class="f7 fa fa-search f5-l input-reset bn fl black-80 bg-white pa2 lh-solid w-90 br-pill " autocomplete="off" placeholder="Search..." type="text" name="search" value="" id="search">
                   </div>
                 </div>
 
